@@ -1,1 +1,52 @@
 some commands to manage the pip freeze
+
+Unix/macOS
+python -m pip freeze [options]
+
+Description
+Output installed packages in requirements format.
+
+packages are listed in a case-insensitive sorted order.
+
+Options
+
+-r, --requirement <file>
+Use the order in the given requirements file and its comments when generating output. This option can be used multiple times.
+
+-l, --local
+If in a virtualenv that has global access, do not output globally-installed packages.
+
+--user
+Only output packages installed in user-site.
+
+--path <path>
+Restrict to the specified installation path for listing packages (can be used multiple times).
+
+--all
+Do not skip these packages in the output: setuptools, wheel, pip, distribute
+
+--exclude-editable
+Exclude editable package from output.
+
+--exclude <package>
+Exclude specified package from the output
+
+Examples
+Generate output suitable for a requirements file.
+
+
+Unix/macOS
+python -m pip freeze
+docutils==0.11
+Jinja2==2.7.2
+MarkupSafe==0.19
+Pygments==1.6
+Sphinx==1.2.2
+
+Windows
+Generate a requirements file and then install from it in another environment.
+
+
+Unix/macOS
+env1/bin/python -m pip freeze > requirements.txt
+env2/bin/python -m pip install -r requirements.txt
