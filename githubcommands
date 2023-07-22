@@ -24,3 +24,7 @@ Type :wq to write the file to disk and quit.
 This only updates your local feature branch. To update it on GitHub, push your changes.
 
 $ git push origin <feature-branch>
+
+$ git add --all
+$ git status
+$ git commit -m 

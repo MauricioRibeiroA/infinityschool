@@ -30,4 +30,5 @@ def e_par(numero):
 print("o resultado foi", resultado)
 e_par(resultado)
 e_positivo(resultado)
-print(type(resultado))
+print(f'o numero é: {type(resultado)}')
+
