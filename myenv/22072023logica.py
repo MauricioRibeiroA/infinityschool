@@ -64,3 +64,38 @@ sorted(listaTeste, reverse=True)
 
 listaTeste.sort(reverse=True)
 print(listaTeste)
+
+import random
+'''
+clientes = {}
+
+def addCliente(): 
+    nomeCliente = input('Qual nome? ')
+    telefoneCliente = input('Qual telefone?')
+    clientes[nomeCliente] = telefoneCliente
+    
+while nomeCliente != 'fim':
+    addCliente()
+    if nomeCliente == 'fim':
+        print('ok')
+ '''   
+
+clientes = {}
+
+def addCliente(): 
+    nomeCliente = input('Qual nome? ')
+    telefoneCliente = input('Qual telefone?')
+    clientes[nomeCliente] = telefoneCliente
+    print(clientes)
+    while nomeCliente != 'fim':
+        addCliente()
+        break
+       
+    if nomeCliente == 'fim':
+        clientes.pop('fim')
+        print(clientes)
+        res = key, val = random.choice(list(clientes.items()))
+        print(res)
+       
+addCliente()
+
