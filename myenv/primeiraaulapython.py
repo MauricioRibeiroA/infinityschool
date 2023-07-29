@@ -63,7 +63,7 @@ def converter(f):
 
 print(converter(32))
 '''
-# defining method to write down the alphabet
+# defining method to write down the alphabet with while loop
 length = 28
 alphabet = []
 #i = 97
@@ -80,23 +80,27 @@ def writeAlphabet(i):
 writeAlphabet(i)
 
 print(ord('a'))
-
+'''
+## defining method to write down the alphabet with for range loop
+'''
 for i in range(97, 123):
     alphabet.append(i)
     for letter in alphabet:
         alfabeto = (chr(letter))
-    print(alfabeto,end=',')
+    print(alfabeto,end='')
 '''
-#
+
+#1 - Construa uma estrutura de repetição com a quantidade de números informada pelo usuário e com o comando for, essa estrutura só pode imprimir os números pares.
 '''
 numero = int(input('Digite um numero: '))
 
-for n in range(0, numero, 2):
-    print(n, end=',')
+for n in range(2, numero + 1):
+    if n % 2 == 0:
+        print(n)
 '''
 
-
-#contrua um código onde você peça um número ao usuário e escreva a tabuada de 1 a 10 desse determinado número
+#2 - Contrua um código onde você peça um número ao usuário e escreva a tabuada de 1 a 10 desse determinado número
+'''
 length = 10
 tabuada = []
 
@@ -110,3 +114,10 @@ def calcularTabuada():
     print(tabuada)
 
 calcularTabuada()
+'''
+#2 - Construa um código onde você peça um número ao usuário e escreva a tabuada de 1 a 10 desse determinado número.
+'''
+tabuada = int(input('Digite a tabuada: '))
+for i in range(11):
+    print(f'{tabuada * i}')
+'''
