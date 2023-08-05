@@ -52,19 +52,3 @@ nova_lista = [numero for numero in meus_numeros if numero % 3 == 0]
 
 print(nova_lista)
 '''
-conjunto = []
-def solution(number):
-   if number < 0:
-      return 0
-   for i in range(0, number):
-      conjunto.append(i)
-      multiplosDeTres = [numero for numero in conjunto if numero % 3 == 0]
-      multiplosDeCinco = [numero for numero in conjunto if numero % 5 == 0]
-      multiplos = multiplosDeTres + multiplosDeCinco
-      multiplos = list( dict.fromkeys(multiplos))
-      somaMultiplos = sum(multiplos)
-   
-   
-   print(somaMultiplos)
-
-solution(3)
