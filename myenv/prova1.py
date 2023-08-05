@@ -18,3 +18,4 @@ def averageAge(qtdAlunos):
   print(f'A média de idade da turma é {media}')
                
 averageAge(qtdAlunos)
+

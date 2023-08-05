@@ -1,5 +1,6 @@
 source myenv/bin/activate
 
+sudo apt-get install python3.8-tk
 
 PYTEST
 comando para instalar o pytest 
@@ -7,3 +8,4 @@ pip install pytest
 o arquivo de teste deve iniciar com o nome test_
 comando para rodar o teste
 python -m pytest nome do arquivo onde estao os testes
+
