@@ -1,6 +1,7 @@
 #CREATE
 #list
 #Lista é uma coleção ordenada e mutável. Permite membros duplicados
+from collections import UserString
 from xxlimited import new
 
 
@@ -31,7 +32,6 @@ create_dict_from_keys()
 print('-'*50)
 
 #READ
-
 print(lista)
 print(tupla)
 print(setList)
@@ -98,6 +98,20 @@ def pop_item(item): #Removes the element at the specified position
 def remove_item(item): #Removes the first item with the specified value
   pass
 
+
+dict_of_lists = {'nomes': ['Dunga', 'Zangado', 'Soneca'], 'cores': ['Azul', 'Vermelho', 'Amarelo']}
+#print(dict_of_lists)
+#print(dict_of_lists.keys())
+#print(dict_of_lists.values())
+nomesCadastrados = dict_of_lists['nomes']
+print(nomesCadastrados)
+
+
+#ternary operator && dictionary of lists
+def userLogin():
+  nome_usuario = input('Digite o seu nome para ter acesso ao sistema: ')
+  print('Usuario logado') if nome_usuario in nomesCadastrados else print('Usuario não cadastrado')
+userLogin()
 
 
 
