@@ -21,8 +21,4 @@ resultado.append(intersecao)
 resultado.append(soma_da_intersecao)
 #conversão para tuple já que ela seria imutável durante o tratamento dos dados
 resu_tuple = tuple(resultado)
-print(resultado)
-
-
-
-
+print(resu_tuple)
