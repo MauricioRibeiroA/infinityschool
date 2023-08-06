@@ -14,7 +14,6 @@ for i in range(0, 6):
 
 #usando built-in method da <class 'set'> disponivel . Melhor estrutura para trabalhar com conjuntos e menor alocacação de memória Big O do que listas com iterations
 intersecao = list(set(list1).intersection(list2))
-intersecao1 = set(list1).intersection(list2)
 #somando os elementos da nova lista
 soma_da_intersecao = sum(intersecao)
 #addicionando elementos especificios na lista que irá ser convertida em uma tuple
