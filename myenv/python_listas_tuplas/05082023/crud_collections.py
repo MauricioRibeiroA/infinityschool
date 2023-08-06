@@ -76,12 +76,12 @@ print(insert_item(1, 'cadeira'))
   print(f'o novo dicionario é: {dict}')
 update_dict(dicionarioDados, 'nome', 'jose')'''
 
-def update_dict_square_brackets(dict, key, new_value):
+def update_dict_square_brackets(dict, key, new_value): #Changes values from keys
   dict[key] = new_value
   print(f'o novo dicionario a partir de square brackets é: {dict}')
 update_dict_square_brackets(dicionarioDados, 'nome', 'jose') 
 
-def update_dict_key_value(dict, key, new_value):
+def update_dict_key_value(dict, key, new_value): #Adds new key and value
   dict.update({key: new_value})
   print(f'novo dicionario a partir do built-in method update  é: {dict}')
 update_dict_key_value(dicionarioDados, 'nome', 'Mau')
