@@ -1,17 +1,21 @@
 #CREATE
 #list
+#Lista é uma coleção ordenada e mutável. Permite membros duplicados
 lista = ['mauricio', 'ribeiro']
 print(type(lista))
 
 #tuple
+#Tupla é uma coleção orndenada e imutável. Permite membros duplicados.
 tupla = ('mauricio', 'ribeiro')
 print(type(tupla))
 
 #set
+#Set é uma coleção não ordenada e não indexada. Nenhum membro duplicado.
 setList = set(['mauricio', 'ribeiro'])
 print(type(setList))
 
 #dict
+#O dicionário é uma coleção ordenada e mutável. Nenhum membro duplicado. 
 dicionarioDados = {'nome': 'mauricio', 'sobrenome': 'ribeiro'}
 print(type(dicionarioDados))
 print('-'*50)
@@ -22,7 +26,7 @@ print(setList)
 print(dicionarioDados)
 print('-'*50)
 #UPDATE
-#Lista é uma coleção ordenada e mutável. Permite membros duplicados
+
 def append_item(item): #Adds an element at the end of the list
   lista.append(item)
   return lista
@@ -55,8 +59,6 @@ def remove_item(item): #Removes the first item with the specified value
 
 
 
-#Tupla é uma coleção orndenada e imutável. Permite membros duplicados.
 
-#Set é uma coleção não ordenada e não indexada. Nenhum membro duplicado.
 
-#O dicionário é uma coleção ordenada e mutável. Nenhum membro duplicado. 
+
