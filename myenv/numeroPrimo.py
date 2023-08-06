@@ -23,7 +23,6 @@ def itsPrime(num):
         return 'O número não é primo.'
     
 #verificar com algoritmo Big O
-
     for i in range(2, int(math.sqrt(num) + 1)):
       if num % i == 0:
          return "O número não é primo."
