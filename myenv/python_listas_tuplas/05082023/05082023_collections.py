@@ -15,16 +15,9 @@ def populateNames():
         
 populateNames()
 
-def invertName(nome):
-    print(nome[::-1])
+
 #perguntar 4 vezes as notas
-    
-def calcularMedia():
-    while len(notas) <= qtd_notas:
-        nota = int(input('digite uma nota: '))
-        notas.append(nota)
-        media = sum(notas) / len(notas)
-    return f'a média do aluno é {media}'
+
 
 def checkType():
     for i in range(0, len(nomes)):
