@@ -36,3 +36,5 @@ def update_student(student_name, info_to_change, arg1):
     pass
 
 #DELETE
+def delete_student():
+    pass
