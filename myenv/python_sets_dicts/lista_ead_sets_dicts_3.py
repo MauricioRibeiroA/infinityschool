@@ -2,13 +2,21 @@ infos = ['nome', 'nota1', 'nota2', 'nota3', 'nota4', 'menor_nota', 'maior_nota',
 
 novas_infos = dict.fromkeys(infos)
 
-def get_infos_method():
-  novas_infos['nome'] = input('Digite o seu nome: ')
-  novas_infos['nota1'] = int(input('Digite sua primeira nota: '))
-  novas_infos['nota2'] = int(input('Digite sua segunda nota: '))
-  novas_infos['nota3'] = int(input('Digite sua terceira nota: '))
-  novas_infos['nota4'] = int(input('Digite sua quarta nota: '))
-get_infos_method()
+for i in range(0, 2):
+  def get_infos_method():
+    novas_infos['nome'] = input('Digite o seu nome: ')
+    novas_infos['nota1'] = int(input('Digite sua primeira nota: '))
+    novas_infos['nota2'] = int(input('Digite sua segunda nota: '))
+    novas_infos['nota3'] = int(input('Digite sua terceira nota: '))
+    novas_infos['nota4'] = int(input('Digite sua quarta nota: '))
+    return novas_infos
+  get_infos_method()
+
+def setting_name_as_data_index():
+  chaves_index_nome = list(novas_infos.keys())[0]
+  return chaves_index_nome
+index_name = setting_name_as_data_index()
+print(index_name)
 
 def creating_notas_array():
   notas = [novas_infos['nota1'], novas_infos['nota2'], novas_infos['nota3'], novas_infos['nota4']]
@@ -47,11 +55,16 @@ def msg_estimulo():
   else:
     return 'Acreditamos no seu potencial e nos vemos no próximo curso'
 mensagem_aluno = msg_estimulo()
-  
+
+for i in novas_infos:
+  print(i)
+
 def historico_aluno(arg1):
-  print(f'Este é o histórico escolar do aluno: {novas_infos[arg1]}')
-  print(f'As suas notas no período letivo foram: {conjunto_notas}. Sendo que sua maior nota foi {maior_nota} e a sua menor nota foi {menor_nota}')
-  print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.{mensagem_aluno}')
-historico_aluno('nome')
+   print(f'Este é o histórico escolar do aluno: {novas_infos[arg1]}')
+   print(f'O nome do aluno é: {novas_infos[index_name]}')
+   print(f'As suas notas no período letivo foram: {conjunto_notas}. Sendo que sua maior nota foi {maior_nota} e a sua menor nota foi {menor_nota}')
+   print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.{mensagem_aluno}')
+   print('-'*30)
+#historico_aluno('nome')
 
 
