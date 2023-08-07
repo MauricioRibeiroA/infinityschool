@@ -1,31 +1,3 @@
-from enum import Enum
-
-'''class infos(Enum):
-    nome = 1
-    sobrenome = 2
-    idade = 3
-    email =4
-
-dados = dict.fromkeys(infos)
-
-for i in dados:
-    v = input(f'Responda qual seu(sua) {i}: ')
-    #print(i)
-    #print(dados[i])
-    dados[i] = v
-print(dados)'''
-
-
-'''infos = ['nome', 'sobrenome', 'idade', 'email']
-dados = dict.fromkeys(infos)
-count = 0
-for i in dados:
-    v = input(f'Responda qual seu(sua) {i}: ')
-    #print(i)
-    #print(dados[i])
-    dados[i] = v
-print(dados)'''
-#########################################################3
 infos = ['nome', 'nota1', 'nota2', 'nota3', 'nota4', 'menor_nota', 'maior_nota', 'situacao', 'status']
 
 novas_infos = dict.fromkeys(infos)
@@ -79,7 +51,7 @@ mensagem_aluno = msg_estimulo()
 def historico_aluno(arg1):
   print(f'Este é o histórico escolar do aluno: {novas_infos[arg1]}')
   print(f'As suas notas no período letivo foram: {conjunto_notas}. Sendo que sua maior nota foi {maior_nota} e a sua menor nota foi {menor_nota}')
-  print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.   {mensagem_aluno}')
+  print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.{mensagem_aluno}')
 historico_aluno('nome')
 
 
