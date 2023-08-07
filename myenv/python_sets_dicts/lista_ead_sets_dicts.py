@@ -37,7 +37,11 @@ def get_infos_method():
   novas_infos['nota3'] = int(input('Digite sua terceira nota: '))
   novas_infos['nota4'] = int(input('Digite sua quarta nota: '))
 get_infos_method()
-print(novas_infos)
+
+def creating_notas_array():
+  notas = [novas_infos['nota1'], novas_infos['nota2'], novas_infos['nota3'], novas_infos['nota4']]
+  return notas
+conjunto_notas = creating_notas_array()
 
 def calculate_max_grade():
   notas = [novas_infos['nota1'], novas_infos['nota2'], novas_infos['nota3'], novas_infos['nota4']]
@@ -64,11 +68,18 @@ def defining_situacao():
   else:
     return 'Reprovado'
 situacao_aluno = defining_situacao()
-  
 
+def msg_estimulo():
+  if situacao_aluno == 'Aprovado':
+    return 'Parabéns!'
+  else:
+    return 'Acreditamos no seu potencial e nos vemos no próximo curso'
+mensagem_aluno = msg_estimulo()
+  
 def historico_aluno(arg1):
   print(f'Este é o histórico escolar do aluno: {novas_infos[arg1]}')
-  print(f'A sua média durante o ano letivo foi: {media_aluno}portanto você está {situacao_aluno}')
+  print(f'As suas notas no período letivo foram: {conjunto_notas}. Sendo que sua maior nota foi {maior_nota} e a sua menor nota foi {menor_nota}')
+  print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.   {mensagem_aluno}')
 historico_aluno('nome')
 
 
