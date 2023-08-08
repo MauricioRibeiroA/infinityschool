@@ -4,34 +4,39 @@ nested_students = dict()
 dados = ['nome', 'nota1', 'nota2', 'nota3', 'nota4', 'menor_nota', 'maior_nota', 'media', 'situacao', 'status']
 students = dict.fromkeys(dados)
 #criando as 7 keys para cada um dos sete alunos
-for i in range(0, 3):
-   nested_students['student'+str(i)] = students
+for i in range(0, 4):
+   nested_students['student'+'_'+str(i)] = students
+   #print(students)
    
 #UPDATE
 
 def update_specific_student(key_name):
     value_name = input('Qual nome do aluno? ')
-    nested_students['student'][key_name] = value_name
-update_specific_student('nome')
+    nested_students['student_2'][key_name] = value_name
+#update_specific_student('nome')
+nested_students['student_2']['nome'] = 'mauricio'
+print(nested_students['student_2']['nome'])
 
 
-'''def get_infos_method():
-   students['nome'] = input('Digite o seu nome: ')
-   students['nota1'] = int(input('Digite sua primeira nota: '))
-   students['nota2'] = int(input('Digite sua segunda nota: '))
-   students['nota3'] = int(input('Digite sua terceira nota: '))
-   students['nota4'] = int(input('Digite sua quarta nota: '))
-   notas = [students['nota1'], students['nota2'], students['nota3'], students['nota4']]
-   students['menor_nota'] = __builtins__.min(notas) 
-   students['maior_nota'] = __builtins__.max(notas) 
-   grades_sum = __builtins__.sum(notas)
-   students['media'] = grades_sum / len(notas)
-   students['status'] = 'Aprovado' if students['media'] > 7 else 'Reprovado'  
+'''for i in range(0,2):
+  #def get_infos_method(increment):
+  nested_students['student'+'_'+str(i)]['nome'] = input('Digite o seu nome: ')
+  students['nota1'] = int(input('Digite sua primeira nota: '))
+  students['nota2'] = int(input('Digite sua segunda nota: '))
+  students['nota3'] = int(input('Digite sua terceira nota: '))
+  students['nota4'] = int(input('Digite sua quarta nota: '))
+  notas = [students['nota1'], students['nota2'], students['nota3'], students['nota4']]
+  students['menor_nota'] = __builtins__.min(notas) 
+  students['maior_nota'] = __builtins__.max(notas) 
+  grades_sum = __builtins__.sum(notas)
+  students['media'] = grades_sum / len(notas)
+  students['status'] = 'Aprovado' if students['media'] > 7 else 'Reprovado'  '''
+  
    #return students
-get_infos_method()
-get_infos_method()
-get_infos_method()'''
-print(nested_students)
+  #get_infos_method(i)
+#get_infos_method()
+#get_infos_method()
+#print(nested_students)
 #print(students)
 
 
