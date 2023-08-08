@@ -56,8 +56,8 @@ def msg_estimulo():
     return 'Acreditamos no seu potencial e nos vemos no próximo curso'
 mensagem_aluno = msg_estimulo()
 
-for i in novas_infos:
-  print(i)
+'''for i in novas_infos:
+  print(i)'''
 
 def historico_aluno(arg1):
    print(f'Este é o histórico escolar do aluno: {novas_infos[arg1]}')
@@ -65,6 +65,6 @@ def historico_aluno(arg1):
    print(f'As suas notas no período letivo foram: {conjunto_notas}. Sendo que sua maior nota foi {maior_nota} e a sua menor nota foi {menor_nota}')
    print(f'A sua média durante o ano letivo foi: {media_aluno}, portanto você está {situacao_aluno}.{mensagem_aluno}')
    print('-'*30)
-#historico_aluno('nome')
+historico_aluno('nome')
 
 
