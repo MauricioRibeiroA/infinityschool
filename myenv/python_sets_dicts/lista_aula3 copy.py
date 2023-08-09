@@ -73,23 +73,21 @@ students = defaultdict(str)
 students['1']
 students['2']
 
-
 StdsInfo = [{'name': 'mauricio', 'grade1': '8'},{'name': 'maumau', 'grade1': '6'}]
-D = dict(zip(students, StdsInfo))
+nested_students = dict(zip(students, StdsInfo))
 
+def create_student(nested_students, std_nome, grade_1):
+  ultimo_estudante = list(nested_students)[-1]
+  ultimo_estudante_n = int(ultimo_estudante) + 1
+  variavel_to_str = str(ultimo_estudante_n)
+  nested_students[variavel_to_str] = {'name': std_nome, 'grade1': grade_1}
+  nested_students = dict(zip(students, StdsInfo))
+create_student(nested_students, 'foo bar', 9)
+create_student(nested_students, 'lorem ipsum', 8.5)
+create_student(nested_students, 'foo bar1', 7.3)
 
-def create_student(D, std_nome, grade_1):
-  ultima = list(D)[-1]
-  teste = int(ultima) + 1
-  change_teste = str(teste)
-  D[change_teste] = {'name': std_nome, 'grade1': grade_1}
-  D = dict(zip(students, StdsInfo))
-create_student(D, 'foo bar', 9)
-create_student(D, 'lorem ipsum', 8.5)
-create_student(D, 'foo bar1', 7.3)
-
-
-print(json.dumps(D, indent=4))
+print(json.dumps(nested_students, indent=4))
+  
   
 
    
