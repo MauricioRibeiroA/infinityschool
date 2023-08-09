@@ -94,16 +94,18 @@ def create_student(nested_students, std_nome):
 
 #slice para iterar apenas entre as notas????  depois da um apend e cria uma array das notas do aluno
 #colocar condicional para nenhuma das notas ser zero, senao o programa vai bugar
-print(int(nested_students['1']['grade1'])+int(nested_students['1']['grade2'])+int(nested_students['1']['grade3'])+int(nested_students['1']['grade4']))
+soma_notas = int(nested_students['1']['grade1'])+int(nested_students['1']['grade2'])+int(nested_students['1']['grade3'])+int(nested_students['1']['grade4']))
+
+#or
 
 grades_grouped = itertools.islice(nested_students['1'].values(), 1, 5)
 print(grades_grouped)
 print(type(grades_grouped))
-listado = list()
+group_notas = list()
 
 for i in grades_grouped:
-  listado.append(int(i))
-print(sum(listado))
+  group_notas.append(int(i))
+somatorio = (sum(group_notas))
 
 #for i in range(0, 2)
 print(json.dumps(nested_students, indent=4))
