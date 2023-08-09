@@ -64,6 +64,34 @@ if iniciar == 'Y':'''
 '''for student in nested_students:
     nested_students['student'] = students'''
 
+#DONE
+from collections import defaultdict
+import json
+
+students = defaultdict(str)
+
+students['1']
+students['2']
+
+
+StdsInfo = [{'name': 'mauricio', 'grade1': '8'},{'name': 'maumau', 'grade1': '6'}]
+D = dict(zip(students, StdsInfo))
+
+
+def create_student(D, std_nome, grade_1):
+  ultima = list(D)[-1]
+  teste = int(ultima) + 1
+  change_teste = str(teste)
+  D[change_teste] = {'name': std_nome, 'grade1': grade_1}
+  D = dict(zip(students, StdsInfo))
+create_student(D, 'foo bar', 9)
+create_student(D, 'lorem ipsum', 8.5)
+create_student(D, 'foo bar1', 7.3)
+
+
+print(json.dumps(D, indent=4))
+  
+
    
 
 
