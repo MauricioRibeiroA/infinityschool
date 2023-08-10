@@ -71,6 +71,52 @@ if iniciar == 'Y':'''
 '''for student in nested_students:
     nested_students['student'] = students'''
 
-   
+#DONE
+from collections import defaultdict
+import json
+import itertools
+
+students = defaultdict(str)
+
+students['1']
+students['2']
+
+StdsInfo = [{'name': 'mauricio', 'grade1': '8', 'grade2': '6', 'grade3': '7', 'grade4': '2'},{'name': 'maumau', 'grade1': '6'}]
+nested_students = dict(zip(students, StdsInfo))
+
+def create_student(nested_students, std_nome):
+  ultimo_estudante = list(nested_students)[-1]
+  ultimo_estudante_n = int(ultimo_estudante) + 1
+  variavel_to_str = str(ultimo_estudante_n)
+  grade_1 = input('digite sua primeira nota')
+  grade_2 = input('digite sua segunda nota')
+  grade_3 = input('digite sua terceira nota')
+  grade_4 = input('digite sua quarta nota')
+  nested_students[variavel_to_str] = {'name': std_nome, 'grade1': grade_1, 'grade2': grade_2, 'grade3': grade_3, 'grade4': grade_4}
+  nested_students = dict(zip(students, StdsInfo))
+#create_student(nested_students, 'foo bar')
+#create_student(nested_students, 'lorem ipsum')
+#create_student(nested_students, 'foo bar1')
+
+
+#slice para iterar apenas entre as notas????  depois da um apend e cria uma array das notas do aluno
+#colocar condicional para nenhuma das notas ser zero, senao o programa vai bugar
+soma_notas = int(nested_students['1']['grade1'])+int(nested_students['1']['grade2'])+int(nested_students['1']['grade3'])+int(nested_students['1']['grade4']))
+
+#or
+
+grades_grouped = itertools.islice(nested_students['1'].values(), 1, 5)
+print(grades_grouped)
+print(type(grades_grouped))
+group_notas = list()
+
+for i in grades_grouped:
+  group_notas.append(int(i))
+somatorio = (sum(group_notas))
+
+#for i in range(0, 2)
+print(json.dumps(nested_students, indent=4))
+  
+
 
 
