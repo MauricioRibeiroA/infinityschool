@@ -7,15 +7,22 @@ students = dict.fromkeys(dados)
 for i in range(0, 4):
    nested_students['student'+'_'+str(i)] = students
    #print(students)
-   
+
+print('nested students class')
+print(nested_students)
+print(type(nested_students)) 
+print('dados class')
+print(type(dados)) 
+print('students class')
+print(type(students)) 
+
 #UPDATE
 
 def update_specific_student(key_name):
     value_name = input('Qual nome do aluno? ')
     nested_students['student_2'][key_name] = value_name
 #update_specific_student('nome')
-nested_students['student_2']['nome'] = 'mauricio'
-print(nested_students['student_2']['nome'])
+
 
 
 '''for i in range(0,2):
