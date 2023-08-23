@@ -20,4 +20,5 @@ def biggest_number_max_method(num_1: int, num_2: int):
     '''Recebe dois números como argumentos e retorna o maior entre eles utilizando a função max'''
     big_num = max(num_1, num_2)
     return f'O maior número entre ambos é o {big_num}'
-print(biggest_number_max_method(num_1, num_2))
+#print(biggest_number_max_method(num_1, num_2))
+

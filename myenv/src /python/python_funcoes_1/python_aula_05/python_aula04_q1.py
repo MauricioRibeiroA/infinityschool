@@ -4,35 +4,9 @@ import json
 import re
 import string
 
-nested_people = [
-  {'name': 'Joao', 'peso': 87, 'altura': 1.76},
-  {'name': 'Batista', 'peso': 96, 'altura': 1.86},
-  {'name': 'Jose', 'peso': 78, 'altura': 1.66},
-  {'name': 'Pedro', 'peso': 98, 'altura': 1.96},
-  ]
-#print(json.dumps(nested_people, indent=4))
-
-def calc_imc(name: str, peso: int, altura: int):
-  '''Retorna o IMC de uma pessoa'''
-  imc = peso / altura**2
-  return f'O IMC de {name} é {imc}'
 
 
-#for i in range(4):
-  print(calc_imc(nested_people[i]['name'], nested_people[i]['peso'], nested_people[i]['altura']))
-######################################################
-  #Faça uma função para calcular o valor/hora de um funcionario
-'''nome_funcionario = input('Qual o nome do funcionário? ')
-salario = int(input('Quanto o funcionário recebeu no período? '))
-horas_trab = int(input('Quantas horas o funcionário trabalhou no período? '))'''
 
-
-def calculate_valorhora(valor_recebido: int, funcionario_name: str, horas_trabalhadas: int):
-    valor_hora = valor_recebido / horas_trabalhadas
-    return f'O valor hora do funcionário {funcionario_name} é de R${valor_hora}'
-  
-#print(calculate_valorhora(salario, nome_funcionario, horas_trab))
-######################################################
 palavra_frase = 'm@uricio estuda python!'
 
 qtd = len(palavra_frase)
