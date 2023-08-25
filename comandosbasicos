@@ -1,8 +1,15 @@
+#start the virtuual env created
 source myenv/bin/activate
 
-sudo apt-get install python3.8-tk
+#start anaconda terminal on linux terminal
+conda list
+#start anaconda navigator inside conda terminar
+anaconda-navigator
 
+#how to access mysql from terminal
 mysql -u root -p
+
+sudo apt-get install python3.8-tk
 
 PYTEST
 comando para instalar o pytest 
