@@ -1,6 +1,9 @@
 #start the virtuual env created
 source myenv/bin/activate
 
+#mysql bibliotecas dando problema com python 3.10 global (so roda no myenv)
+#matplotlib dando problema com a versão 3.10 global (so roda no myenv)
+
 #start anaconda terminal on linux terminal
 conda list
 #start anaconda navigator inside conda terminar
